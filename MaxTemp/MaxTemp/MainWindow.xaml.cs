@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using Microsoft.Win32;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -24,7 +25,7 @@ namespace MaxTemp
     {
         public MainWindow()
         {
-            InitializeComponent();
+            
         }
 
         /// <summary>
@@ -36,23 +37,62 @@ namespace MaxTemp
         /// <param name="e"></param>
         private void BtnAuswerten_Click(object sender, RoutedEventArgs e)
         {
-            //Zugriff auf Datei erstellen.
+            string filePath = SelectCSVFile();
+            if (string.IsNullOrEmpty(filePath))
+            {
+                lblAusgabe.Content = "Keine Datei ausgewählt";
+                return;
+            }
 
-            //Anfangswert setzen, um sinnvoll vergleichen zu können.
+            float maxValue = float.MinValue;
+            string maxLine = null;
+            int maxLineNumber = -1;
 
+            try
+            {
+                int currentLineNumber = 0;
+                foreach (string line in File.ReadLines(filePath))
+                {
+                    currentLineNumber++;
+                    string[] parts = line.Split(',');
+                    for(int i = 2; i < parts.Length; i++)
+                    {
+                        if (float.TryParse(parts[i], NumberStyles.Float, CultureInfo.InvariantCulture, out float value))
+                        {
+                            if(value > maxValue)
+                            {
+                                maxValue = value;
+                                maxLine = line;
+                                maxLineNumber = currentLineNumber;
+                            }
+                        }
+                    }
+                }
 
-            //In einer Schleife die Werte holen und auswerten. Den größten Wert "merken".
+                if (maxLine != null)
+                {
+                    lblAusgabe.Content = $"Größter Wert: {maxValue.ToString("F2", CultureInfo.InvariantCulture)} in der CSV Datei bei Zeile: {maxLineNumber}";
+                    lblAusgabeInfo.Content = $"Weitere Informationen: {maxLine}";
+                }
+                else
+                    lblAusgabe.Content = "Fehler: Keine Zahlenwerte gefunden.";
+            }
+            catch (Exception ex)
+            {
+                lblAusgabe.Content = "Fehler beim lesen der csv Datei: " + ex.Message;
+            }
+        }
 
+        public string SelectCSVFile()
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            MessageBox.Show("Bitte wähle eine .csv Datei aus.");
+            openFileDialog.Filter = "CSV Files (*.csv)|*.csv|All Files (*.*)|*.*";
+            bool? result = openFileDialog.ShowDialog();
 
-            //Datei wieder freigeben.
+            if (result == true) return openFileDialog.FileName;
+            else return null;
 
-
-            //Höchstwert auf Oberfläche ausgeben.
-
-            MessageBox.Show("Gleich kachelt das Programm...");
-            //kommentieren Sie die Exception aus.
-            //throw new Exception("peng");
-            throw new Exception("PENG!");
         }
     }
 }
