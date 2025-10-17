@@ -52,6 +52,7 @@ namespace MaxTemp
             MessageBox.Show("Gleich kachelt das Programm...");
             //kommentieren Sie die Exception aus.
             //throw new Exception("peng");
+            throw new Exception("PENG!");
         }
     }
 }
