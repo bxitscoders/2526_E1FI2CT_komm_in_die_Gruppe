@@ -37,6 +37,7 @@ namespace MaxTemp
         /// <param name="e"></param>
         private void BtnAuswerten_Click(object sender, RoutedEventArgs e)
         {
+            // Öffnet einen Dialog, um die CSV-Datei auszuwählen.
             string filePath = SelectCSVFile();
             if (string.IsNullOrEmpty(filePath))
             {
@@ -44,9 +45,10 @@ namespace MaxTemp
                 return;
             }
 
+            // Initialisierung der Variablen, um den größten Wert zu speichern.
             float maxValue = float.MinValue;
             string maxLine = null;
-            int maxLineNumber = -1;
+            int maxLineNumber = -1; // Zeilennummer des größten Werts
 
             try
             {
@@ -57,6 +59,7 @@ namespace MaxTemp
                     string[] parts = line.Split(',');
                     for(int i = 2; i < parts.Length; i++)
                     {
+                        // Konvertiert, den Text in eine String.
                         if (float.TryParse(parts[i], NumberStyles.Float, CultureInfo.InvariantCulture, out float value))
                         {
                             if(value > maxValue)
@@ -71,7 +74,7 @@ namespace MaxTemp
 
                 if (maxLine != null)
                 {
-                    lblAusgabe.Content = $"Größter Wert: {maxValue.ToString("F2", CultureInfo.InvariantCulture)} in der CSV Datei bei Zeile: {maxLineNumber}";
+                    lblAusgabe.Content = $"Größter Wert: {maxValue.ToString("F2", CultureInfo.InvariantCulture)} in der CSV Datei, Zeile: {maxLineNumber}";
                     lblAusgabeInfo.Content = $"Weitere Informationen: {maxLine}";
                 }
                 else
@@ -88,11 +91,12 @@ namespace MaxTemp
             OpenFileDialog openFileDialog = new OpenFileDialog();
             MessageBox.Show("Bitte wähle eine .csv Datei aus.");
             openFileDialog.Filter = "CSV Files (*.csv)|*.csv|All Files (*.*)|*.*";
-            bool? result = openFileDialog.ShowDialog();
+            bool? result = openFileDialog.ShowDialog(); // Öffnet den Dialog – true, wenn der Benutzer eine Datei auswählt
 
-            if (result == true) return openFileDialog.FileName;
-            else return null;
-
+            if (result == true) 
+                    return openFileDialog.FileName;
+            else return 
+                    null;
         }
     }
 }

@@ -3,11 +3,10 @@
 # Temperatur-Analyse-Tool für Serverraum
 
 ## Projektbeschreibung
-Dieses Tool analysiert Temperaturdaten im Serverraum, um Überhitzungsprobleme zu erkennen und Ausfallrisiken der Server zu reduzieren.
+Dieses Tool analysiert Temperaturdaten im Serverraum, um Überhitzungsprobleme zu erkennen.
 
 ## Anforderungen
 - .NET X.X
-- ... weitere Bibliotheken
 
 ## Installation
 1. Repository klonen
@@ -18,6 +17,3 @@ Dieses Tool analysiert Temperaturdaten im Serverraum, um Überhitzungsprobleme z
 ## Nutzung
 - Lade die temps.csv Datei im Programm
 - Analysiere die Temperaturwerte an verschiedenen Messpunkten
-
-## Lösungsvorschlag
-Empfohlene Maßnahmen zur Klimatisierung und Raumgestaltung basierend auf Analyseergebnissen.
