@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Path = System.IO.Path;
 
 namespace MaxTemp
 {
@@ -37,6 +38,11 @@ namespace MaxTemp
         private void BtnAuswerten_Click(object sender, RoutedEventArgs e)
         {
             //Zugriff auf Datei erstellen.
+            string relativePath = Path.Combine("MaxTemp", "temps.csv");
+            string fullPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "temps.csv");
+            FileStream datenStrom = new FileStream(fullPath, FileMode.Open);
+            StreamReader reader = new StreamReader(datenStrom);
+            string eingelesenerText = reader.ReadToEnd(); //"eingelesenerText" ist die Variabel die für den Inhalt der CSV-Datei weiterverwendet werden kann.
 
             //Anfangswert setzen, um sinnvoll vergleichen zu können.
 
