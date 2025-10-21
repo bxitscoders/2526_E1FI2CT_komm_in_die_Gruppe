@@ -1,19 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using Path = System.IO.Path;
 
 namespace MaxTemp
@@ -40,24 +28,39 @@ namespace MaxTemp
             //Zugriff auf Datei erstellen.
             string relativePath = Path.Combine("MaxTemp", "temps.csv");
             string fullPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "temps.csv");
-            FileStream datenStrom = new FileStream(fullPath, FileMode.Open);
-            StreamReader reader = new StreamReader(datenStrom);
-            string eingelesenerText = reader.ReadToEnd(); //"eingelesenerText" ist die Variabel die für den Inhalt der CSV-Datei weiterverwendet werden kann.
-
-            //Anfangswert setzen, um sinnvoll vergleichen zu können.
-
-
+            
             //In einer Schleife die Werte holen und auswerten. Den größten Wert "merken".
+            double maxValue = double.MinValue;
+            string maxValueFormatted = string.Empty;
+            string line;
 
+            // Öffne die Datei zum Lesen in einem FileStream und lade sie mit einem StreamReader
+            using (FileStream datenStrom = new FileStream(fullPath, FileMode.Open))
+            using (StreamReader reader = new StreamReader(datenStrom))
 
-            //Datei wieder freigeben.
+            // Lese Zeile für Zeile, bis alle Zeilen der Datei verarbeitet sind
+            while ((line = reader.ReadLine()) != null)
+            {
+                string[] parts = line.Split(',');
 
+                // Prüfe, ob mindestens drei Elemente vorhanden sind (Index 0,1,2)
+                // Versuche den dritten Wert als Zahl (double) zu parsen
+                // NumberStyles.Any bedeutet, dass sämtliche üblichen Zahlenformatierungen erlaubt sind
+                // verwende InvariantCulture für Punkt als Dezimaltrennzeichen
+                if (parts.Length >= 3 && double.TryParse(parts[2], NumberStyles.Any, CultureInfo.InvariantCulture, out double wert))
+                {
+                    if (wert > maxValue)
+                    {
+                        maxValue = wert;
+                        // Formatiere den gefundenen Höchstwert mit 2 Nachkommastellen zur Anzeige
+                        // (Punkt als Dezimaltrennzeichen)
+                        maxValueFormatted = wert.ToString("F1", CultureInfo.InvariantCulture);
+                    }
+                }
 
-            //Höchstwert auf Oberfläche ausgeben.
+                //Höchstwert auf Oberfläche ausgeben.
 
-            MessageBox.Show("Gleich kachelt das Programm...");
-            //kommentieren Sie die Exception aus.
-            //throw new Exception("peng");
+            }
         }
     }
 }
