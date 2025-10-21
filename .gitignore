@@ -1,1 +1,8 @@
-// for later use.
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.cache
+*.userosscache
+*.vsidx
