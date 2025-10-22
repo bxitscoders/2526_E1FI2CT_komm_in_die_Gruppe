@@ -33,15 +33,20 @@ namespace MaxTemp
             double maxValue = double.MinValue;
             string maxValueFormatted = string.Empty;
             string line;
+            
+            int currentLine = 0;      // zählt alle gelesenen Zeilen
+            int lineOfMax = -1;       // Zeilennummer, an der der aktuelle Max gefunden wurde
 
             // Öffne die Datei zum Lesen in einem FileStream und lade sie mit einem StreamReader
             using (FileStream datenStrom = new FileStream(fullPath, FileMode.Open))
             using (StreamReader reader = new StreamReader(datenStrom))
 
-            // Lese Zeile für Zeile, bis alle Zeilen der Datei verarbeitet sind
+                // Lese Zeile für Zeile, bis alle Zeilen der Datei verarbeitet sind
+            
             while ((line = reader.ReadLine()) != null)
             {
-                string[] parts = line.Split(',');
+                 currentLine++; // jede gelesene Zeile hochzählen
+                 string[] parts = line.Split(',');
 
                 // Prüfe, ob mindestens drei Elemente vorhanden sind (Index 0,1,2)
                 // Versuche den dritten Wert als Zahl (double) zu parsen
@@ -55,12 +60,14 @@ namespace MaxTemp
                         // Formatiere den gefundenen Höchstwert mit 2 Nachkommastellen zur Anzeige
                         // (Punkt als Dezimaltrennzeichen)
                         maxValueFormatted = wert.ToString("F1", CultureInfo.InvariantCulture);
+                        lineOfMax = currentLine;
                     }
                 }
-
-                //Höchstwert auf Oberfläche ausgeben.
-
             }
+
+            //Höchstwert auf Oberfläche ausgeben.
+            lblAusgabe.Content = "Höchsttemperatur: " + maxValueFormatted + "°C";
+            lblZeile.Content = "gefunden in Zeile: " + lineOfMax;
         }
     }
 }
