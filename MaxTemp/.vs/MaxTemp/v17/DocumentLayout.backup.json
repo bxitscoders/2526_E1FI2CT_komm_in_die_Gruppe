@@ -1,14 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Johannes\\Documents\\Code\\2526_E1FI2CT_komm_in_die_Gruppe\\MaxTemp\\",
+  "WorkspaceRootPath": "C:\\Users\\Secre\\Documents\\GitHub\\2526_E1FI2CT_komm_in_die_Gruppe\\MaxTemp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B45271A9-5D2D-48EF-9A99-BF38062C3AB8}|MaxTemp\\MaxTemp.csproj|c:\\users\\johannes\\documents\\code\\2526_e1fi2ct_komm_in_die_gruppe\\maxtemp\\maxtemp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B45271A9-5D2D-48EF-9A99-BF38062C3AB8}|MaxTemp\\MaxTemp.csproj|c:\\users\\secre\\documents\\github\\2526_e1fi2ct_komm_in_die_gruppe\\maxtemp\\maxtemp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B45271A9-5D2D-48EF-9A99-BF38062C3AB8}|MaxTemp\\MaxTemp.csproj|solutionrelative:maxtemp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B45271A9-5D2D-48EF-9A99-BF38062C3AB8}|MaxTemp\\MaxTemp.csproj|c:\\users\\johannes\\documents\\code\\2526_e1fi2ct_komm_in_die_gruppe\\maxtemp\\maxtemp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{B45271A9-5D2D-48EF-9A99-BF38062C3AB8}|MaxTemp\\MaxTemp.csproj|C:\\Users\\Secre\\Documents\\GitHub\\2526_E1FI2CT_komm_in_die_Gruppe\\MaxTemp\\maxtemp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{B45271A9-5D2D-48EF-9A99-BF38062C3AB8}|MaxTemp\\MaxTemp.csproj|solutionrelative:maxtemp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B45271A9-5D2D-48EF-9A99-BF38062C3AB8}|MaxTemp\\MaxTemp.csproj|C:\\Users\\Secre\\Documents\\GitHub\\2526_E1FI2CT_komm_in_die_Gruppe\\MaxTemp\\maxtemp\\temps.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{B45271A9-5D2D-48EF-9A99-BF38062C3AB8}|MaxTemp\\MaxTemp.csproj|solutionrelative:maxtemp\\temps.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B45271A9-5D2D-48EF-9A99-BF38062C3AB8}|MaxTemp\\MaxTemp.csproj|C:\\Users\\Secre\\Documents\\GitHub\\2526_E1FI2CT_komm_in_die_Gruppe\\MaxTemp\\maxtemp\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B45271A9-5D2D-48EF-9A99-BF38062C3AB8}|MaxTemp\\MaxTemp.csproj|solutionrelative:maxtemp\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,23 +26,27 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "temps.csv",
+              "DocumentMoniker": "C:\\Users\\Secre\\Documents\\GitHub\\2526_E1FI2CT_komm_in_die_Gruppe\\MaxTemp\\MaxTemp\\temps.csv",
+              "RelativeDocumentMoniker": "MaxTemp\\temps.csv",
+              "ToolTip": "C:\\Users\\Secre\\Documents\\GitHub\\2526_E1FI2CT_komm_in_die_Gruppe\\MaxTemp\\MaxTemp\\temps.csv",
+              "RelativeToolTip": "MaxTemp\\temps.csv",
+              "ViewState": "AgIAAOQAAAAAAAAAAAAAAOcDAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
+              "WhenOpened": "2025-10-22T10:20:55.759Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\Johannes\\Documents\\Code\\2526_E1FI2CT_komm_in_die_Gruppe\\MaxTemp\\MaxTemp\\MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Secre\\Documents\\GitHub\\2526_E1FI2CT_komm_in_die_Gruppe\\MaxTemp\\MaxTemp\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MaxTemp\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\Johannes\\Documents\\Code\\2526_E1FI2CT_komm_in_die_Gruppe\\MaxTemp\\MaxTemp\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Secre\\Documents\\GitHub\\2526_E1FI2CT_komm_in_die_Gruppe\\MaxTemp\\MaxTemp\\MainWindow.xaml",
               "RelativeToolTip": "MaxTemp\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-10-21T15:32:32.166Z",
@@ -44,14 +56,26 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Johannes\\Documents\\Code\\2526_E1FI2CT_komm_in_die_Gruppe\\MaxTemp\\MaxTemp\\MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Secre\\Documents\\GitHub\\2526_E1FI2CT_komm_in_die_Gruppe\\MaxTemp\\MaxTemp\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MaxTemp\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\Johannes\\Documents\\Code\\2526_E1FI2CT_komm_in_die_Gruppe\\MaxTemp\\MaxTemp\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Secre\\Documents\\GitHub\\2526_E1FI2CT_komm_in_die_Gruppe\\MaxTemp\\MaxTemp\\MainWindow.xaml.cs",
               "RelativeToolTip": "MaxTemp\\MainWindow.xaml.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAADsAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAADkAAAAAAAAAAAAYwA8AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-20T09:06:27.081Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Secre\\Documents\\GitHub\\2526_E1FI2CT_komm_in_die_Gruppe\\MaxTemp\\MaxTemp\\App.xaml.cs",
+              "RelativeDocumentMoniker": "MaxTemp\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\Secre\\Documents\\GitHub\\2526_E1FI2CT_komm_in_die_Gruppe\\MaxTemp\\MaxTemp\\App.xaml.cs",
+              "RelativeToolTip": "MaxTemp\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T10:14:12.728Z"
             }
           ]
         }
