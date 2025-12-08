@@ -1,19 +1,26 @@
 Retrospektive Team: Komm in die Gruppe
 
 Was lief gut?
--	Aufgabenverteilung
--	Kommunikation
--	Daily Meetings
+-	Aufgabenverteilung untereinander für die versch. Task
+
+-	Unsere Daily Meetings liefen gut , weil die Kommunikation sehr zügig und direkt waren . Man ist die wichtigsten Punkte direkt gegangen und dadurch schneller weiter gearbeitet hat.  
+
 -	Zeit für die Fertigstellung des Projekts
 
 Verbesserungen
 -	Manchmal waren die Tasks schlecht übertragbar auf das Projekt
 -	Für manche zu wenig Zeit für das bearbeiten der Tasks
+-       Mansche beschäftigten sich mit Task die nicht mit der Programmierung zu tun hat , wärend die anderen programmiert haben.
 
 Was hatte ich für Erwartungen?
 -	Mehr Eigeninitiative
+
 -	Mehr Hilfestellung vom Lehrer
 
+-       Das die Basics (nicht nur Varieablen ) sondern auch die basics Kenntnisse (die eigentlich etwa mehr sind als besics für c# beginner)  vom haubt Aufgabe einmal zumindest beschbrochen werden.
+
 Ideen
--	Bessere Einschätzung der benötigten Zeit für die Bearbeitung der Tasks
--	Bessere Priorisierung der Tasks
+
+-	Bessere Einschätzung der benötigten Zeit für die Bearbeitung der Tasks, damit wir andere Tasks die wichtiger sind mehr Zeit schencken.
+
+-	Bessere Priorisierung aller Tasks.
